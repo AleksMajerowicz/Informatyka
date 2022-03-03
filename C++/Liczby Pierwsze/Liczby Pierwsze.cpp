@@ -12,11 +12,31 @@ int main()
     int liczbaNaturalna = 2;
     int dzielnik = 2;
 
-    while (iloscLiczbPierwszych <= iloscLiczb)
+    cout << "Ile liczb Pierwszych Chcesz Wyświetlić?: ";
+    cin >> iloscLiczb;
+    cout << endl << "Liczby Pierwsze: ";
+
+
+
+    while (iloscLiczbPierwszych < iloscLiczb)
     {
-        for (int i = 2; i <= liczbaNaturalna; i++)
+
+        while (dzielnik < liczbaNaturalna)
         {
-            
+            if (liczbaNaturalna % dzielnik == 0)
+            {
+                dzielnik = 2;
+                liczbaNaturalna++;
+                break;
+            }
+            dzielnik++;
+        }
+        if(dzielnik >= liczbaNaturalna)
+        {
+            cout << liczbaNaturalna << ",";
+            dzielnik = 2;
+            liczbaNaturalna++;
+            iloscLiczbPierwszych++;
         }
     }
 }
