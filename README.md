@@ -25,4 +25,7 @@ Opis "Zadania z Tablic1"
 Opis "Zadanie z Informatyki-Pętle"
 	Plik zawiera zadanie polegajacym na stworzeniu pętli która zapisuje liczby podzielne przez 6
 
-Opis ""
+Opis "Liczby Pierwsze"
+	Plik zawiera Algorytm wyznaczania Liczb Pierwszych
+Opis "NWW i NWD"
+	Plik zawiera Algorytm obliczania NWD i NWW podanych dwóch Liczb
