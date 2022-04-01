@@ -12,9 +12,34 @@ void SzyfrowanieIDeszyfrowanie(char slowo[], int k)
         int d = strlen(slowo);
         if (k >= 0)
         {
-
+            for (int i = 0; i < d; i++)
+            {
+                if (slowo[i] + k <= 26)
+                {
+                    slowo[i] += k;
+                }
+                else
+                {
+                    slowo = slowo + k - 26
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < d; i++)
+            {
+                if (slowo[i] + k >= 0)
+                {
+                    slowo[i] += k;
+                }
+                else
+                {
+                    slowo = slowo + k + 26
+                }
+            }
         }
     }
+    cout << slowo;
 }
 
 int main()
@@ -27,6 +52,9 @@ int main()
 
     cout << "Podaj klucz: ";
     cin >> klucz;
+
+    cout << "Po Zaszyfrowaniu: " << SzyfrowanieIDeszyfrowanie(tab, klucz);
+    cout << "Po Rozszyfrowaniu:  " << SzyfrowanieIDeszyfrowanie(tab, !klucz);
 
 
 }
