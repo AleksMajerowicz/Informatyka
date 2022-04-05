@@ -7,7 +7,7 @@ using namespace std;
 
 void SzyfrowanieIDeszyfrowanie(char slowo[], int k)
 {
-    if (!(k >= -26 && k <= 26))
+    if (k >= -26 && k <= 26)
     {
         int d = strlen(slowo);
         if (k >= 0)
@@ -20,11 +20,11 @@ void SzyfrowanieIDeszyfrowanie(char slowo[], int k)
                 }
                 else
                 {
-                    slowo = slowo + k - 26
+                    slowo[i] = slowo[i] + k - 26;
                 }
             }
         }
-        else
+        else if (k < 0)
         {
             for (int i = 0; i < d; i++)
             {
@@ -34,17 +34,18 @@ void SzyfrowanieIDeszyfrowanie(char slowo[], int k)
                 }
                 else
                 {
-                    slowo = slowo + k + 26
+                    slowo[i] = slowo[i] + k + 26;
                 }
             }
         }
     }
+
     cout << slowo;
 }
 
 int main()
 {
-    char tab[200];
+    char tab[1000];
     int klucz;
 
     cout << "Podaj słowo z małych Liter!: ";
@@ -53,9 +54,9 @@ int main()
     cout << "Podaj klucz: ";
     cin >> klucz;
 
-    cout << "Po Zaszyfrowaniu: " << SzyfrowanieIDeszyfrowanie(tab, klucz);
-    cout << "Po Rozszyfrowaniu:  " << SzyfrowanieIDeszyfrowanie(tab, !klucz);
-
+    cout << "Po Zaszyfrowaniu: ";  SzyfrowanieIDeszyfrowanie(tab, klucz);
+    cout << endl;
+    cout << "Po Rozszyfrowaniu:  ";  SzyfrowanieIDeszyfrowanie(tab, -klucz);
 
 }
 
