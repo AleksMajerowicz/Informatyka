@@ -1,20 +1,23 @@
 ﻿// Szyfrowanie kodem ASCII.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
+#include <iostream>
 
 using namespace std;
 
-#include <iostream>
-
 void SzyfrowanieIDeszyfrowanie(char slowo[], int k)
 {
-    if (k >= -26 && k <= 26)
+    if (!(k >= -26 && k <= 26))
     {
+        return;
+    }
+
         int d = strlen(slowo);
+
         if (k >= 0)
         {
             for (int i = 0; i < d; i++)
             {
-                if (slowo[i] + k <= 26)
+                if (slowo[i] + k <= 'z')
                 {
                     slowo[i] += k;
                 }
@@ -28,7 +31,7 @@ void SzyfrowanieIDeszyfrowanie(char slowo[], int k)
         {
             for (int i = 0; i < d; i++)
             {
-                if (slowo[i] + k >= 0)
+                if (slowo[i] + k >= 'a')
                 {
                     slowo[i] += k;
                 }
@@ -38,8 +41,6 @@ void SzyfrowanieIDeszyfrowanie(char slowo[], int k)
                 }
             }
         }
-    }
-
     cout << slowo;
 }
 
