@@ -1,9 +1,9 @@
 ﻿// Sortowanie Binarne.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
 
-using namespace std;
-
 #include <iostream>
+
+using namespace std;
 
 int WyszukiwanieBinarne(int sz)
 {
