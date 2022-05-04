@@ -17,7 +17,7 @@ Opis "lekca 4"
 	Plik zawiera Program,omawiajace nowe zagadnienie-Listy Jedno jak i dwu wymiarowe
 
 Opis "Powtózenie"
-	Plik zawiera P[rogram powtózeniowy z If,while,do..wchile,for oraz switch'a jak i z róznych funkcjionalności jak np: modulo
+	Plik zawiera Program powtózeniowy z If,while,do..wchile,for oraz switch'a jak i z róznych funkcjionalności jak np: modulo
 
 Opis "Zadania z Tablic1"
 	Plik zawiera 4 zadania z zagadnieniem Tablic
@@ -27,5 +27,17 @@ Opis "Zadanie z Informatyki-Pętle"
 
 Opis "Liczby Pierwsze"
 	Plik zawiera Algorytm wyznaczania Liczb Pierwszych
+
 Opis "NWW i NWD"
 	Plik zawiera Algorytm obliczania NWD i NWW podanych dwóch Liczb
+	
+Opis Algorytmu "Szyfrowanie Kodem ASCII"
+	Plik zawiera Algorytm szyfrowania podanego tekstu,szyfrem cezara według podanego klucza przez uzytkownika.
+	
+Opis Algorytmu "Ciąg Fibonaciego"
+	plik zawiera Algorytm wyznaczania daną ilośc liczb Ciągu Fibonaciego.
+	
+Opis Algorytmu "Sortowanie binarne"
+	Plik zawiera algorytm sortowania binanego gotowej tablicy liczb.
+	
+
