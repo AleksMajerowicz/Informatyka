@@ -1,35 +1,43 @@
 ﻿// Ciąg Fibonaciego.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
 
-using namespace std;
-
 #include <iostream>
+#include <chrono>
+
+using namespace std;
 
 int main()
 {
-
-    int f0 = 0;
-    int f1 = 1;
-    int f;
+    long long f0 = 0;
+    long long f1 = 1;
+    long long f;
     int l;
+
+    chrono::system_clock::time_point timeStart;
+    chrono::system_clock::time_point timeStop;
 
     cout << "Ile wyrazów Ciągu Wpisać: ";
     cin >> l;
 
     for(int i = 0; i <= l; i++)
     {
+        timeStart = chrono::system_clock::now();
         if (i > 1)
         {
             f = f0 + f1;
             f0 = f1;
             f1 = f;
-            cout << f << endl;
+            cout << f << " ";
         }
         else
         {
             f = i;
-            cout << f << endl;
+            cout << f << " ";
         }
+
+        timeStop = chrono::system_clock::now();
+
+        cout << "Obliczono w czasie: " << chrono::duration_cast<chrono::nanoseconds>(timeStop - timeStart).count() << " nanosekund" << endl;
     }
 }
 
