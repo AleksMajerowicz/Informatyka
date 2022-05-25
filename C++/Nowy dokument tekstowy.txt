@@ -1,0 +1,54 @@
+#include <iostream>
+#include <chrono>
+
+using namespace std;
+
+int WyszukiwanieBinarne(short int sz)
+{
+	short int tab[15] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 };
+
+	short int l = 0;
+	short int p = 15;
+	short int sr = (l + p) / 2;
+
+	while (l <= p)
+	{
+		if (tab[sr] == sz)
+		{
+			return sr;
+		}
+		else if (tab[sr] > sz)
+		{
+			p = sr - 1;
+		}
+		else if (tab[sr] < sz)
+		{
+			l = sr + 1;
+		}
+
+		sr = (l + p) / 2;
+	}
+
+
+	return -1;
+}
+
+int main()
+{
+	short int szukana;
+	short int pozycja;
+
+	chrono::system_clock::time_point timeStart;
+	chrono::system_clock::time_point timeStop;
+
+	cout << "Podaj Liczbę którą chcesz znaleść: ";
+	cin >> szukana;
+	
+	timeStart = chrono::system_clock::now();
+	
+	pozycja = WyszukiwanieBinarne(szukana);
+	
+	timeStop = chrono::system_clock::now();
+	
+	cout << "Liczba " << szukana << " wystepuje w zbiorze w komorce o indeksie " << pozycja << " W czasie: " << chrono::duration_cast<chrono::nanoseconds>(timeStop - timeStart).count() << " nanosekund";
+}
